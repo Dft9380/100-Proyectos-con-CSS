@@ -1,0 +1,159 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 8px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #3FAF82;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+	cursor: pointer;
+}
+
+.line {
+	width: 90px;
+	height: 9px;
+	
+	border-radius: 3px;
+	background-color: white;
+	box-shadow: 0 0 8px 0 rgb(0, 0, 0, 45%);
+	
+	animation-duration: 1.1s;
+  animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+.line:not(:last-of-type) {
+	margin-bottom: 15px;
+}
+
+.firstAdd {
+	animation-name: firstAdd;
+}
+.secondAdd {
+	animation-name: secondAdd;
+}
+.thirdAdd {
+	animation-name: thirdAdd;
+}
+
+@keyframes firstAdd {
+	0% { 
+		transform: translate(0, 0) rotate(0);
+	}
+	50% { 
+		transform: translate(0, 25px) rotate(0);
+	}
+	100% { 
+		transform: translate(0, 25px) rotate(45deg);
+	}
+}
+
+@keyframes secondAdd {
+	0% { 
+		transform: scale(1);
+		opacity: 1;
+	}
+	50% { 
+		transform: scale(0.5, 0.8);
+		opacity: 0.2;
+	}
+	55% {
+		transform: scale(0.5, 0.8);
+		opacity: 0;
+	}
+	100% { 
+		transform: scale(0.5, 0.8);
+		opacity: 0;
+	}
+}
+
+@keyframes thirdAdd {
+	0% { 
+		transform: translate(0, 0) rotate(0);
+	}
+	50% { 
+		transform: translate(0, -25px) rotate(0);
+	}
+	100% { 
+		transform: translate(0, -25px) rotate(135deg);
+	}
+}
+
+.firstRemove {
+	animation-name: firstRemove;
+}
+.secondRemove {
+	animation-name: secondRemove;
+}
+.thirdRemove {
+	animation-name: thirdRemove;
+}
+
+@keyframes firstRemove {
+	0% { 
+		transform: translate(0, 25px) rotate(45deg);
+	}
+	50% { 
+		transform: translate(0, 25px) rotate(0);
+	}
+	100% { 
+		transform: translate(0, 0) rotate(0);
+	}
+}
+
+@keyframes secondRemove {
+	0% { 
+		transform: scale(0.5, 0.8);
+		opacity: 0;
+	}
+	50% {
+		transform: scale(0.5, 0.8);
+		opacity: 0;
+	}
+	55% { 
+		transform: scale(0.5, 0.8);
+		opacity: 0.2;
+	}
+	100% { 
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes thirdRemove {
+	0% { 
+		transform: translate(0, -25px) rotate(135deg);
+	}
+	50% { 
+		transform: translate(0, -25px) rotate(0);
+	}
+	100% { 
+		transform: translate(0, 0) rotate(0);
+	}
+}
