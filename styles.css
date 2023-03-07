@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+
 .frame {
     position: absolute;
     top: 50%;
@@ -14,7 +17,7 @@
     background: -o-linear-gradient(bottom left, #43389F 0%, #4ec6ca 100%);
     background: linear-gradient(to top right, #43389F 0%, #4ec6ca 100%); 
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#43389F', endColorstr='#4ec6ca',GradientType=1 ); 
-    font-family: 'Courier New', 'Courier', sans-serif;
+    font-family: 'Courier Prime', monospace;
     color: #fff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
